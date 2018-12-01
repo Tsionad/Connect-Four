@@ -6,6 +6,7 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import './App.css';
 
 
 const ThemedIndex = () => (
