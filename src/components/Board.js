@@ -1,16 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Row from './Row';
 
-export default class Board extends React.Component {
 
-  static propTypes = {
-    rows: React.PropTypes.arrayOf(React.PropTypes.arrayOf(React.PropTypes.number)),
-    winPositions: React.PropTypes.arrayOf(React.PropTypes.shape({
-      row: React.PropTypes.number,
-      column: React.PropTypes.number
-    })),
-    onClick: React.PropTypes.func
-  }
+export default class Board extends React.Component {
 
   render() {
 
@@ -37,3 +30,12 @@ export default class Board extends React.Component {
     );
   }
 }
+
+Board.propTypes = {
+  rows: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number)),
+  winPositions: PropTypes.arrayOf(PropTypes.shape({
+    row: PropTypes.number,
+    column: PropTypes.number
+  })),
+  onClick: PropTypes.func
+};
