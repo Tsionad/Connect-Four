@@ -1,17 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
+
 
 export default class Position extends React.Component {
-
-  static propTypes = {
-    rowIndex: React.PropTypes.number,
-    colIndex: React.PropTypes.number,
-    value: React.PropTypes.number,
-    winPositions: React.PropTypes.arrayOf(React.PropTypes.shape({
-      row: React.PropTypes.number,
-      column: React.PropTypes.number
-    })),
-    onClick: React.PropTypes.func
-  }
 
   _handleClick(e) {
     e.stopPropagation();
@@ -51,3 +43,15 @@ export default class Position extends React.Component {
     );
   }
 }
+
+Position.propTypes = {
+  rowIndex: PropTypes.number,
+  colIndex: PropTypes.number,
+  value: PropTypes.number,
+  winPositions: PropTypes.arrayOf(PropTypes.shape({
+    row: PropTypes.number,
+    column: PropTypes.number
+  })),
+  onClick: PropTypes.func
+};
+
